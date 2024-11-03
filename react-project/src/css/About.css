@@ -1,0 +1,55 @@
+#about-us-text {
+	width: 80%;
+	margin: auto;
+	text-align: justify;
+	text-align-last: center;
+}
+
+#about-us-text div {
+	background-color: var(--color-item-accent);
+	border-radius: var(--border-radius);
+	padding: 5px 20px;
+	margin: 40px;
+}
+
+#about-us-text h2 {
+	font-family: Kalam, Roboto, sans-serif;
+	font-size: 200%;
+	margin: 8px 0;
+}
+
+#contact-form {
+	width: 60%;
+	margin: auto;
+}
+
+#contact-form .columns {
+	margin: 0;
+	justify-content: space-between;
+}
+
+#contact-form label {
+	display: block;
+	margin-right: 2%;
+}
+
+#contact-form input,
+textarea {
+	width: 90%;
+	border: solid var(--color-primary) 2px;
+	border-radius: 5px;
+	background-color: var(--color-accent);
+	text-align: left;
+}
+
+@media only screen and (min-width: 935px) {
+	#contact-form label {
+		text-align: right;
+		width: 49%;
+	}
+
+	#contact-form input,
+	textarea {
+		width: 45%;
+	}
+}

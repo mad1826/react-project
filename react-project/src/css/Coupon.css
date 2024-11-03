@@ -1,0 +1,80 @@
+#coupon-image {
+	border-radius: var(--border-radius);
+}
+
+#coupon {
+	position: relative;
+	border-radius: var(--border-radius);
+	font-size: 150%;
+}
+
+#coupon h3 {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 5%;
+	margin: 0;
+}
+
+#coupon .columns-all {
+	position: absolute;
+	width: 100%;
+	top: 25%;
+	height: 15%;
+	justify-content: space-evenly;
+}
+
+#coupon p {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.coupon-column {
+	width: 50%;
+	height: 100%;
+	text-align: center;
+}
+
+.coupon-column img {
+	height: 100%;
+	width: fit-content;
+	border-radius: 0;
+}
+
+#old-price {
+	position: absolute;
+	width: 100%;
+	top: 40%;
+	height: 15%;
+	text-decoration: line-through;
+}
+
+#new-price {
+	position: absolute;
+	width: 100%;
+	top: 55%;
+	height: 15%;
+}
+
+#coupon button {
+	position: absolute;
+	width: 40%;
+	top: 70%;
+	left: 30%;
+	height: 20%;
+	background-color: var(--color-primary);
+	font-size: 100%;
+}
+
+#expires-at {
+	position: absolute;
+	right: 5%;
+	bottom: 14%;
+	margin: 0;
+	font-size: 80%;
+}
+
+#item-notes {
+	width: 75%;
+	margin: 20px auto;
+}

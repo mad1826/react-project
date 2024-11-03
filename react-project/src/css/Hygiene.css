@@ -1,0 +1,20 @@
+#hygiene-items .item {
+	border-radius: var(--border-radius);
+}
+
+#hygiene-items img {
+	width: 50%;
+	flex: 1;
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+#hygiene-items .item-details {
+	width: 50%;
+	flex: 1;
+	padding: 15px 1px;
+	font-size: 85%;
+}
+
+#hygiene-items .item-details p {
+	margin: 2px 0;
+}

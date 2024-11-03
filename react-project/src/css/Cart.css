@@ -1,0 +1,121 @@
+#cart-header {
+	display: block;
+	height: 100px;
+	font-size: 11px;
+}
+
+#cart-header h2 {
+	font-weight: 100;
+}
+
+#cart-header button {
+	margin: 15px 0px 20px 30px;
+	background-color: var(--color-important);
+	color: var(--color-item-accent);
+	height: 30px;
+}
+
+#cart-header .left {
+	float: left;
+}
+
+#cart-header .right {
+	float: right;
+}
+
+#cart-header .right + h2 {
+	color: var(--color-secondary);
+}
+
+.cart-coupon {
+	display: flex;
+	border-radius: var(--border-radius);
+	margin-bottom: 20px;
+	font-size: 11px;
+	width: 100%;
+	height: 225px;
+	background-color: var(--color-item-accent);
+	padding: 5px;
+	border: solid var(--color-primary) 2px;
+}
+
+.cart-coupon .image {
+	width: 30%;
+}
+
+.cart-coupon-details {
+	position: relative;
+	width: 70%;
+	font-size: 150%;
+}
+
+.cart-coupon-details p {
+	margin: 0;
+}
+
+.cart-coupon-details .name {
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	margin: 0;
+}
+
+.cart-coupon-details .store-name {
+	position: absolute;
+	right: 20%;
+	top: 10%;
+	margin: 0;
+	text-align: right;
+}
+
+.cart-coupon-details .price {
+	position: absolute;
+	left: 10%;
+	top: 43%;
+}
+
+.cart-coupon-details .notes {
+	position: absolute;
+	left: 10%;
+	bottom: 10%;
+	width: 40%;
+	font-size: 60%;
+	text-wrap: wrap;
+	text-align: left;
+}
+
+.cart-coupon-details .expires-at {
+	position: absolute;
+	right: 20%;
+	bottom: 10%;
+	text-align: right;
+}
+
+.cart-coupon-details .share {
+	position: absolute;
+	top: 7%;
+	right: 3%;
+	max-height: 20%;
+}
+
+.cart-coupon-details .remove {
+	position: absolute;
+	bottom: 7%;
+	right: 3%;
+	max-height: 20%;
+}
+
+@media only screen and (min-width: 935px) {
+	#cart-header {
+		font-size: 15px;
+	}
+
+	.cart-coupon {
+		font-size: 15px;
+	}
+
+	.cart-coupon-details .share,
+	.cart-coupon-details .remove {
+		max-height: 40%;
+	}
+}

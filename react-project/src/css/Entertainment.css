@@ -1,0 +1,15 @@
+#entertainment-items .item {
+	height: 200px;
+}
+
+#entertainment-items p {
+	font-size: 10.6px;
+	margin: 8px 0;
+}
+
+@media only screen and (min-width: 935px) {
+	#entertainment-items p {
+		font-size: 14px;
+		padding: 0 5px;
+	}
+}

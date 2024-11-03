@@ -1,0 +1,36 @@
+.grocery-item {
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	height: 250px;
+}
+
+.grocery-item img {
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	width: 100%;
+	height: 82%;
+	margin-bottom: 10px;
+}
+
+.grocery-item .item-details {
+	background-color: var(--color-item-accent);
+	outline: solid var(--color-primary) 2px;
+	padding: 1px 5px;
+}
+
+.grocery-item ul {
+	list-style-type: none;
+	padding-left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
+.grocery-item ul:hover {
+	background-color: var(--color-accent);
+}
+
+.grocery-item li {
+	display: inline-block;
+	padding-left: 0px;
+	margin: 0;
+}
