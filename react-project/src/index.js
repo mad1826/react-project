@@ -58,7 +58,7 @@ const App = () => {
 					<Route path='coupon' element={(<Coupon coupon={coupon} rec={coupons.slice(2, 6)} />)} />
 					<Route path='grocery' element={(<Grocery coupons={filterCoupons('grocery')} />)} />
 					<Route path='entertainment' element={(<Entertainment coupons={filterCoupons('entertainment')} setCoupon={setCoupon} />)} />
-					<Route path='hygiene' element={(<Hygiene coupons={filterCoupons} />)} />
+					<Route path='hygiene' element={(<Hygiene coupons={filterCoupons('hygiene')} />)} />
 					<Route path='about' element={(<About />)} />
 					<Route path='admin' element={(<Admin />)} />
 					<Route path='cart' element={(<Cart coupons={coupons.filter(c => carts[0]?.items.includes(c._id))} cart={carts[0]} />)} />
