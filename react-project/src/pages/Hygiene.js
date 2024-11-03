@@ -5,7 +5,7 @@ import { createEmpty } from '../functions';
 const Hygiene = options => {
 	return <div id='hygiene-items' className='columns-all'>
 		{options.coupons.map(coupon =>
-			<HygieneCoupon coupon={coupon} key={coupon._id} />
+			<HygieneCoupon coupon={coupon} setCoupon={options.setCoupon} key={coupon._id} />
 		)}
 		{options.coupons.length % 2 === 1 && createEmpty()}
 	</div>;

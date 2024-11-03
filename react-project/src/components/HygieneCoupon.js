@@ -4,7 +4,7 @@ import { getCouponImg, getPrice } from '../functions';
 const HygieneCoupon = options => {
 	const coupon = options.coupon;
 
-	return <Link to='/coupon' className='item columns-all'>
+	return <Link to='/coupon' className='item columns-all' onClick={() => options.setCoupon(coupon)}>
 		{getCouponImg(coupon)}
 		<div className='item-details'>
 			<p className='bold'>{coupon.name}</p>

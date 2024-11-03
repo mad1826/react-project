@@ -1,11 +1,20 @@
 import { Link } from 'react-router-dom';
 
-const GroceryCouponDetails = details => {
-	return <Link to='/coupon'>
+const GroceryCouponDetails = options => {
+	const coupon = {
+		...options.coupon,
+		store: {
+			...options.coupon.store,
+			name: options.store
+		},
+		deal: options.deal,
+		exp: options.exp
+	};
+	return <Link to='/coupon' onClick={() => options.setCoupon(coupon)}>
 		<ul>
-			<li>{details.store}</li>
-			<li>{details.deal}</li>
-			<li>{details.exp}</li>
+			<li>{options.store}</li>
+			<li>{options.deal}</li>
+			<li>{options.exp}</li>
 		</ul>
 	</Link>;
 };

@@ -33,7 +33,7 @@ const Coupon = options => {
 		<h2>You Might Also Like</h2>
 		<div id='recommended' className='columns-all'>
 			{rec.map(recCoupon =>
-				<SecondaryFeatured coupon={recCoupon} key={recCoupon._id} />
+				<SecondaryFeatured coupon={recCoupon} setCoupon={options.setCoupon} key={recCoupon._id} />
 			)}
 		</div>
 	</>;

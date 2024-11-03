@@ -27,12 +27,12 @@ const GroceryCoupon = options => {
 		}
 	};
 
-	return <Link to='/coupon' className='item grocery-item' style={style} onClick={onClick}>
+	return <Link to='#' className='item grocery-item' style={style} onClick={onClick}>
 		{getCouponImg(coupon)}
 		<p>{coupon.name}</p>
 		<div className={`item-details${hidden ? ' hidden' : ''}`}>
 			{details.map(detail =>
-				<GroceryCouponDetails store={detail[0]} deal={detail[1]} exp={detail[2]} key={detail[0]} />
+				<GroceryCouponDetails coupon={coupon} store={detail[0]} deal={detail[1]} exp={detail[2]} setCoupon={options.setCoupon} key={detail[0]} />
 			)}
 		</div>
 	</Link>;

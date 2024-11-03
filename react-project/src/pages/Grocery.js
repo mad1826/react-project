@@ -24,7 +24,7 @@ const Grocery = options => {
 		<h2>Deals On</h2>
 		<div id='grocery-items' className='columns-all'>
 			{uniqueItems.map(coupon =>
-				<GroceryCoupon coupon={coupon[0]} details={coupon[1]} key={coupon._id} />
+				<GroceryCoupon coupon={coupon[0]} details={coupon[1]} setCoupon={options.setCoupon} key={coupon._id} />
 			)}
 			{options.coupons.length % 2 === 1 && createEmpty()}
 		</div>
