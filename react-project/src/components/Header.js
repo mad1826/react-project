@@ -29,7 +29,7 @@ const Header = header => {
 				<div />
 			</div>
 			<ul id='nav-items' className={menuOpen ? '' : 'hidden-small'}>
-				<li id={window.location.pathname === '/' ? 'current-tab' : ''}><Link to='/'>Featured</Link></li>
+				<li id={window.location.pathname === '/' ? 'current-tab' : ''}><a href='/react-project/'>Featured</a></li>
 				<li id={isCurrent('grocery') ? 'current-tab' : ''}><Link to='/grocery'>Grocery</Link></li>
 				<li id={isCurrent('entertainment') ? 'current-tab' : ''}><Link to='/entertainment'>Entertainment</Link></li>
 				<li id={isCurrent('hygiene') ? 'current-tab' : ''}><Link to='/hygiene'>Hygiene</Link></li>
