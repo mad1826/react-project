@@ -34,12 +34,12 @@ const App = () => {
 
 	useEffect(() => {
 		const getCoupons = async () => {
-			const res = await fetch('https://mad1826.github.io/csce242/projects/part7/coupons.json');
+			const res = await fetch('https://couponder-api.onrender.com/api/coupons');
 			const json = await res.json();
 			setCoupons(json);
 		};
 		const getCarts = async () => {
-			const res = await fetch('https://mad1826.github.io/csce242/projects/part7/carts.json');
+			const res = await fetch('https://couponder-api.onrender.com/api/carts');
 			const json = await res.json();
 			setCarts(json);
 		};
