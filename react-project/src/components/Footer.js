@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../css/Footer.css';
 
 const Footer = () => {
@@ -7,11 +8,11 @@ const Footer = () => {
 			<li>
 				Images by
 				{' '}
-				<a href='https://www.freepik.com/'>FreePik</a>
+				<Link to='https://www.freepik.com/'>FreePik</Link>
 				{' and '}
-				<a href='https://images.google.com/'>Google Images</a>
+				<Link to='https://images.google.com/'>Google Images</Link>
 			</li>
-			<li><a href='about.html#contact-us'>Contact Us</a></li>
+			<li><Link to='about.html#contact-us'>Contact Us</Link></li>
 		</ul>
 	</footer>;
 };
