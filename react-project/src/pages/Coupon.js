@@ -16,7 +16,7 @@ const Coupon = options => {
 				<h3>{coupon.name}</h3>
 				<div id='store' className='columns-all'>
 					{coupon.store.logo && <p className='coupon-column'>
-						<img src={`images/stores/${coupon.store.logo}`} />
+						<img src={`images/stores/${coupon.store.logo}`} alt={coupon.store.name} />
 					</p>}
 					<p id='store-name' className='coupon-column'>
 						{coupon.store.name}
