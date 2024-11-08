@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Layout from './Layout';
-import About from './pages/About';
-import Featured from './pages/Featured';
-import Cart from './pages/Cart';
-import Entertainment from './pages/Entertainment';
-import Grocery from './pages/Grocery';
-import Hygiene from './pages/Hygiene';
-import Admin from './pages/Admin';
-import Coupon from './pages/Coupon';
+import Layout from '../Layout';
+import About from '../pages/About';
+import Featured from '../pages/Featured';
+import Cart from '../pages/Cart';
+import Entertainment from '../pages/Entertainment';
+import Grocery from '../pages/Grocery';
+import Hygiene from '../pages/Hygiene';
+import Admin from '../pages/Admin';
+import Coupon from '../pages/Coupon';
 import { useState } from 'react';
 
 const Router = options => {
