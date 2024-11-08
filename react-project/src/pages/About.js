@@ -1,3 +1,4 @@
+import ContactForm from '../components/ContactForm';
 import '../css/About.css';
 
 const About = () => {
@@ -38,31 +39,7 @@ const About = () => {
 				not! We work diligently to review all inquiries as they come in, so
 				please be patient as we work through all feedback.
 			</p>
-			<form id='contact-form' action='https://api.web3forms.com/submit' method='POST'>
-				<input type='hidden' name='access_key' value='e2e85acb-a31c-4618-b04a-371a26d51324' />
-
-				<div className='columns'>
-					<label for='name'>Name:</label>
-					<input id='name' type='text' placeholder='Example: John Doe' name='name' required />
-				</div>
-				<div className='columns'>
-					<label for='email'>Email:</label>
-					<input id='email' type='email' placeholder='Example: jd@gmail.com' name='email' required />
-				</div>
-				<div className='columns'>
-					<label for='message'>Message:</label>
-					<textarea id='message' name='message' required />
-				</div>
-				<input type='hidden' name='redirect' value='https://web3forms.com/success' />
-				<input type='hidden' name='subject' value='CouPonder Message Received' />
-				<input type='hidden' name='from_name' value='CouPonder.com' />
-
-				<p>
-					<button type='submit'>Send Message</button>
-				</p>
-
-				<p id='result' />
-			</form>
+			<ContactForm />
 		</div>
 	</div>;
 };
