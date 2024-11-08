@@ -27,7 +27,6 @@ const ContactForm = () => {
 		}
 	};
 
-	// return <form id='contact-form' action='https://api.web3forms.com/submit' method='POST'>
 	return <form id='contact-form' onSubmit={onSubmit}>
 		<input type='hidden' name='access_key' value='e2e85acb-a31c-4618-b04a-371a26d51324' />
 		<div className='columns'>
@@ -42,7 +41,6 @@ const ContactForm = () => {
 			<label for='message'>Message:</label>
 			<textarea id='message' name='message' required />
 		</div>
-		<input type='hidden' name='redirect' value='https://web3forms.com/success' />
 		<input type='hidden' name='subject' value='CouPonder Message Received' />
 		<input type='hidden' name='from_name' value='CouPonder.com' />
 
