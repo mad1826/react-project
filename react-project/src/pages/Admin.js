@@ -75,6 +75,16 @@ const Admin = options => {
 				<label for='new'>Deal or New Price</label>
 				<input id='new' type='text' name='deal' required value={inputs.deal || ''} onChange={handleChange} />
 			</div>
+			{inputs.type === 'entertainment' && <>
+				<div className='columns-all'>
+					<label for='oldRent'>Normal Rent Price</label>
+					<input id='oldRent' type='text' name='oldRent' required value={inputs.oldRent || ''} onChange={handleChange} />
+				</div>
+				<div className='columns-all'>
+					<label for='newRent'>New Rent Price</label>
+					<input id='newRent' type='text' name='newRent' required value={inputs.newRent || ''} onChange={handleChange} />
+				</div>
+			</>}
 			<div className='columns-all'>
 				<label for='expires'>Expires At</label>
 				<input id='expires' type='text' name='expiresAt' required value={inputs.expiresAt || ''} onChange={handleChange} />
