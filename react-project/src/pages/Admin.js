@@ -54,7 +54,7 @@ const Admin = options => {
 		if (response.status === 200) {
 			const coupon = await response.json();
 			options.deleteCoupon(coupon);
-			setAddResult('Coupon successfully deleted!');
+			setDeleteResult('Coupon successfully deleted!');
 			event.target.reset();
 		}
 		else {
