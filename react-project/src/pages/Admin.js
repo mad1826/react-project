@@ -58,7 +58,7 @@ const Admin = options => {
 			event.target.reset();
 		}
 		else {
-			setAddResult('An error has occurred!');
+			setDeleteResult('An error has occurred!');
 		}
 	};
 
