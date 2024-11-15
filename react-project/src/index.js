@@ -24,7 +24,11 @@ const App = () => {
 		getCarts();
 	}, []);
 
-	return <Router coupons={coupons} carts={carts} />;
+	const addCoupon = coupon => {
+		setCoupons(coupons => [...coupons, coupon]);
+	};
+
+	return <Router coupons={coupons} carts={carts} addCoupon={addCoupon} />;
 };
 
 root.render(

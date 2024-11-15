@@ -41,7 +41,7 @@ const Router = options => {
 					<Route path='entertainment' element={(<Entertainment coupons={filterCoupons('entertainment')} setCoupon={setCoupon} />)} />
 					<Route path='hygiene' element={(<Hygiene coupons={filterCoupons('hygiene')} setCoupon={setCoupon} />)} />
 					<Route path='about' element={(<About />)} />
-					<Route path='admin' element={(<Admin />)} />
+					<Route path='admin' element={(<Admin addCoupon={options.addCoupon} />)} />
 					<Route path='cart' element={(<Cart coupons={coupons.filter(c => carts[0]?.items.includes(c._id))} cart={carts[0]} />)} />
 				</Route>
 			</Routes>
