@@ -95,8 +95,8 @@ const Admin = options => {
 				<input id='old' type='text' name='oldPrice' required value={inputs.oldPrice || ''} onChange={handleChange} />
 			</div>
 			<div className='columns-all'>
-				<label for='new'>Deal or New Price</label>
-				<input id='new' type='text' name='deal' required value={inputs.deal || ''} onChange={handleChange} />
+				<label for='new'>New Price</label>
+				<input id='new' type='text' name='newPrice' required value={inputs.newPrice || ''} onChange={handleChange} />
 			</div>
 			{inputs.type === 'entertainment' && <>
 				<div className='columns-all'>
@@ -111,6 +111,10 @@ const Admin = options => {
 			<div className='columns-all'>
 				<label for='expires'>Expires At</label>
 				<input id='expires' type='text' name='expiresAt' required value={inputs.expiresAt || ''} onChange={handleChange} />
+			</div>
+			<div className='columns-all'>
+				<label for='deal'>Deal (Optional)</label>
+				<input id='deal' type='text' name='deal' required value={inputs.deal || ''} onChange={handleChange} />
 			</div>
 			<div className='columns-all'>
 				<label for='qualifying-items'>Qualifying Items (Optional)</label>
