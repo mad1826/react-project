@@ -71,7 +71,7 @@ const Admin = options => {
 				<input id='id' type='text' name='_id' required value={inputs._id || ''} onChange={handleChange} />
 			</div>
 			<div className='columns-all'>
-				<label for='image-upload'>Select an image</label>
+				<label for='image-upload'>Item Image</label>
 				<input id='image-upload' type='file' name='image' required onChange={handleImageChange} />
 			</div>
 			<div className='columns-all'>
@@ -100,11 +100,11 @@ const Admin = options => {
 			</div>
 			{inputs.type === 'entertainment' && <>
 				<div className='columns-all'>
-					<label for='oldRent'>Normal Rent Price</label>
+					<label for='oldRent'>Normal Rent Price (Entertainment only)</label>
 					<input id='oldRent' type='text' name='oldRent' required value={inputs.oldRent || ''} onChange={handleChange} />
 				</div>
 				<div className='columns-all'>
-					<label for='newRent'>New Rent Price</label>
+					<label for='newRent'>New Rent Price (Entertainment only)</label>
 					<input id='newRent' type='text' name='newRent' required value={inputs.newRent || ''} onChange={handleChange} />
 				</div>
 			</>}

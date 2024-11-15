@@ -1,3 +1,7 @@
+.mng-item {
+	font-size: 115%;
+}
+
 .mng-item .columns-all {
 	justify-content: flex-start;
 }
@@ -16,15 +20,18 @@
 .mng-item input {
 	text-align: left;
 	width: fit-content;
-	max-width: 200px;
+	max-width: 250px;
+	height: 25px;
 }
 
 #add-item {
-	width: 100px;
+	width: 150px;
+	font-size: 100%;
 }
 
 #remove-item {
 	background-color: var(--color-important);
-	width: 100px;
+	width: 150px;
 	margin-bottom: 20px;
+	font-size: 100%;
 }
