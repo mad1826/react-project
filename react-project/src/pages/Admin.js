@@ -33,6 +33,7 @@ const Admin = options => {
 			const coupon = await response.json();
 			options.addCoupon(coupon);
 			setAddResult('Coupon successfully added!');
+			setInputs({ type: 'grocery' });
 			event.target.reset();
 		}
 		else {
@@ -114,7 +115,7 @@ const Admin = options => {
 			</div>
 			<div className='columns-all'>
 				<label for='deal'>Deal (Optional)</label>
-				<input id='deal' type='text' name='deal' required value={inputs.deal || ''} onChange={handleChange} />
+				<input id='deal' type='text' name='deal' value={inputs.deal || ''} onChange={handleChange} />
 			</div>
 			<div className='columns-all'>
 				<label for='qualifying-items'>Qualifying Items (Optional)</label>

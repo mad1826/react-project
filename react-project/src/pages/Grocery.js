@@ -7,15 +7,16 @@ const Grocery = options => {
 	options.coupons.forEach(coupon => {
 		if (coupon.type !== 'grocery') return;
 
+		const deal = coupon.deal ?? `$${coupon.prices[1]}`;
 		let found = false;
 		uniqueItems.forEach(uniqueItem => {
 			if (uniqueItem[0].name === coupon.name) { // found existing item
-				uniqueItem[1].push([coupon.store.name, coupon.deal, coupon.expiresAt]);
+				uniqueItem[1].push([coupon.store.name, deal, coupon.expiresAt]);
 				found = true;
 			}
 		});
 		if (!found) { // item does not exist yet
-			uniqueItems.push([coupon, [[coupon.store.name, coupon.deal, coupon.expiresAt]]]);
+			uniqueItems.push([coupon, [[coupon.store.name, deal, coupon.expiresAt]]]);
 		}
 	});
 
