@@ -4,6 +4,7 @@ import '../css/Admin.css';
 const Admin = options => {
 	const [inputs, setInputs] = useState({ type: 'grocery' });
 	const [addResult, setAddResult] = useState('');
+	const [deleteResult, setDeleteResult] = useState('');
 
 	const handleChange = event => {
 		const name = event.target.name;
@@ -32,6 +33,28 @@ const Admin = options => {
 			const coupon = await response.json();
 			options.addCoupon(coupon);
 			setAddResult('Coupon successfully added!');
+			event.target.reset();
+		}
+		else {
+			setAddResult('An error has occurred!');
+		}
+	};
+
+	const deleteFromServer = async event => {
+		event.preventDefault();
+
+		setDeleteResult('Deleting....');
+
+		const id = document.getElementById('delete-id').value;
+
+		const response = await fetch(`https://couponder-api.onrender.com/api/coupons/${id}`, {
+			method: 'DELETE'
+		});
+
+		if (response.status === 200) {
+			const coupon = await response.json();
+			options.deleteCoupon(coupon);
+			setAddResult('Coupon successfully deleted!');
 			event.target.reset();
 		}
 		else {
@@ -101,13 +124,14 @@ const Admin = options => {
 		</form>
 		<p>{addResult}</p>
 		<h3>Remove Item</h3>
-		<form className='mng-item'>
+		<form className='mng-item' onSubmit={deleteFromServer}>
 			<div className='columns-all'>
-				<label for='id'>Item ID</label>
-				<input id='id' type='text' />
+				<label for='delete-id'>Item ID</label>
+				<input id='delete-id' type='text' name='id' required />
 			</div>
+			<button id='remove-item' type='submit'>Remove Item</button>
 		</form>
-		<button id='remove-item'>Remove Item</button>
+		<p>{deleteResult}</p>
 	</>;
 };
 

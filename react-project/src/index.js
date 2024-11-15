@@ -28,7 +28,11 @@ const App = () => {
 		setCoupons(coupons => [...coupons, coupon]);
 	};
 
-	return <Router coupons={coupons} carts={carts} addCoupon={addCoupon} />;
+	const deleteCoupon = coupon => {
+		setCoupons(coupons => coupons.filter(c => c._id !== coupon._id));
+	};
+
+	return <Router coupons={coupons} carts={carts} addCoupon={addCoupon} deleteCoupon={deleteCoupon} />;
 };
 
 root.render(
