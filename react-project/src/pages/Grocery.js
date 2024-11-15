@@ -1,6 +1,5 @@
 import GroceryCoupon from '../components/GroceryCoupon';
 import '../css/Grocery.css';
-import { createEmpty } from '../functions';
 
 const Grocery = options => {
 	const uniqueItems = []; // format: (itemName, [storeName, deal, exp])[]
@@ -22,11 +21,10 @@ const Grocery = options => {
 
 	return <>
 		<h2>Deals On</h2>
-		<div id='grocery-items' className='columns-all'>
+		<div id='grocery-items' className='grid'>
 			{uniqueItems.map(coupon =>
 				<GroceryCoupon coupon={coupon[0]} details={coupon[1]} setCoupon={options.setCoupon} key={coupon._id} />
 			)}
-			{options.coupons.length % 2 === 1 && createEmpty()}
 		</div>
 	</>;
 };

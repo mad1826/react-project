@@ -96,6 +96,13 @@ button {
 	border-radius: var(--border-radius);
 }
 
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	justify-content: space-between;
+}
+
 .columns-all {
 	display: flex;
 	flex-wrap: wrap;
@@ -201,6 +208,10 @@ button {
 	.columns {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.small-only {

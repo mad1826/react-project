@@ -1,11 +1,5 @@
-import { Link } from 'react-router-dom';
-
 export const getCouponImg = coupon => {
 	return <img src={`https://couponder-api.onrender.com/images/${coupon.type}/${coupon.image}`} className='image' alt={coupon.name} />;
-};
-
-export const createEmpty = (largeOnly = false) => {
-	return <Link to='/coupon' className={`item ${largeOnly ? 'large' : 'small'}-only`} />;
 };
 
 export const getPrice = (coupon, offset = 0, showPercent = false) => {

@@ -1,5 +1,6 @@
 #entertainment-items .item {
 	height: 200px;
+	width: 100%;
 }
 
 #entertainment-items p {
