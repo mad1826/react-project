@@ -23,7 +23,7 @@ const Admin = options => {
 
 		const formData = new FormData(event.target);
 
-		const response = await fetch(`http://localhost:3001/api/coupons?type=${inputs.type}`, {
+		const response = await fetch(`https://couponder-api.onrender.com/api/coupons?type=${inputs.type}`, {
 			method: 'POST',
 			body: formData
 		});
