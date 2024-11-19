@@ -1,0 +1,22 @@
+#delete-modal-content {
+	height: 175px;
+	border-radius: 10px;
+}
+
+#delete-modal-content h3 {
+	margin: auto;
+	line-height: 100px;
+}
+
+#delete-modal-content .columns-all {
+	justify-content: space-evenly;
+}
+
+#delete-modal-content button {
+	width: 20%;
+	font-size: 150%;
+}
+
+#delete-btn {
+	background-color: var(--color-important);
+}

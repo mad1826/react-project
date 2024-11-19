@@ -21,7 +21,6 @@
 /* The Modal from https://www.w3schools.com/w3css/w3css_modal.asp */
 .w3-modal {
 	z-index: 3;
-	display: none;
 	padding-top: 100px;
 	position: fixed;
 	left: 0;

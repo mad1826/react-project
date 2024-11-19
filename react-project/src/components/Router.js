@@ -36,7 +36,7 @@ const Router = options => {
 			<Routes>
 				<Route path='/' element={(<Layout />)}>
 					<Route index element={(<Featured coupons={coupons} setCoupon={setCoupon} />)} />
-					<Route path='coupon' element={(<Coupon coupon={coupon} rec={coupons.slice(2, 6)} setCoupon={setCoupon} />)} />
+					<Route path='coupon' element={(<Coupon coupon={coupon} rec={coupons.slice(2, 6)} setCoupon={setCoupon} deleteCoupon={options.deleteCoupon} />)} />
 					<Route path='grocery' element={(<Grocery coupons={filterCoupons('grocery')} setCoupon={setCoupon} />)} />
 					<Route path='entertainment' element={(<Entertainment coupons={filterCoupons('entertainment')} setCoupon={setCoupon} />)} />
 					<Route path='hygiene' element={(<Hygiene coupons={filterCoupons('hygiene')} setCoupon={setCoupon} />)} />

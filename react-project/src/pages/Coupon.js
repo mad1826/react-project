@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import DeleteModal from '../components/DeleteModal';
 import SecondaryFeatured from '../components/SecondaryFeatured';
 import '../css/Coupon.css';
 import { getCouponImg } from '../functions';
@@ -6,7 +8,16 @@ const Coupon = options => {
 	const coupon = options.coupon;
 	const rec = options.rec;
 
-	console.log(coupon);
+	const [showModal, setShowModal] = useState(false);
+
+	const closeModal = () => {
+		setShowModal(false);
+	};
+
+	const openDelete = () => {
+		setShowModal(true);
+	};
+
 	return <>
 		<div id='coupon-columns' className='columns'>
 			<div id='coupon-image' className='primary-featured'>
@@ -24,8 +35,9 @@ const Coupon = options => {
 				</div>
 				<p id='old-price'>${coupon.prices[0]}</p>
 				<p id='new-price' className='red'>${coupon.prices[1]}!</p>
-				<button>Add to Cart</button>
+				<button id='add-to-cart'>Add to Cart</button>
 				<p id='expires-at'>Exp. {coupon.expiresAt}</p>
+				<button id='delete-coupon' onClick={openDelete}>X</button>
 			</div>
 		</div>
 		<p id='item-notes'>{coupon.details}</p>
@@ -36,6 +48,7 @@ const Coupon = options => {
 				<SecondaryFeatured coupon={recCoupon} setCoupon={options.setCoupon} key={recCoupon._id} />
 			)}
 		</div>
+		{showModal && <DeleteModal coupon={coupon} closeModal={closeModal} deleteCoupon={options.deleteCoupon} />}
 	</>;
 };
 

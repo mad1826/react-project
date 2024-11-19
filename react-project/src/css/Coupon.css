@@ -56,7 +56,7 @@
 	height: 15%;
 }
 
-#coupon button {
+#add-to-cart {
 	position: absolute;
 	width: 40%;
 	top: 70%;
@@ -77,4 +77,15 @@
 #item-notes {
 	width: 75%;
 	margin: 20px auto;
+}
+
+#delete-coupon {
+	position: absolute;
+	right: 5%;
+	top: 5%;
+	background-color: var(--color-important);
+	width: 27px;
+	height: 27px;
+	color: var(--color-item-accent);
+	border-radius: 5px;
 }
