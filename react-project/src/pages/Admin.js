@@ -111,7 +111,7 @@ const Admin = options => {
 			</>}
 			<div className='columns-all'>
 				<label for='expires'>Expires At</label>
-				<input id='expires' type='text' name='expiresAt' required value={inputs.expiresAt || ''} onChange={handleChange} />
+				<input id='expires' type='date'name='expiresAt' required value={inputs.expiresAt || ''} format onChange={handleChange} />
 			</div>
 			<div className='columns-all'>
 				<label for='deal'>Deal (Optional)</label>
