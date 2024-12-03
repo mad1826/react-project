@@ -6,7 +6,7 @@ const EditModal = options => {
 
 	const initExpiresAt = coupon.expiresAt.match(/(\d+)\/(\d+)\/(\d+)/);
 	const [, month, date, year] = initExpiresAt;
-	const initExpiresAtStr = `20${year}-${parseInt(month) < 10 ? `0${parseInt(month)}` : parseInt(month)}-${parseInt(date) < 10 ? `0${date}` : date}`;
+	const initExpiresAtStr = `20${year}-${parseInt(month) < 10 ? `0${parseInt(month)}` : parseInt(month)}-${parseInt(date) < 10 ? `0${parseInt(date)}` : parseInt(date)}`;
 
 	const [newCoupon, setNewCoupon] = useState({ ...coupon, storeName: coupon.store.name, storeLocation: coupon.store.location, oldPrice: coupon.prices[0], newPrice: coupon.prices[1], oldRent: coupon.prices[2], newRent: coupon.prices[3], qualifyingItems: coupon.qualifyingItems?.join(', '), expiresAt: initExpiresAtStr });
 	const [result, setResult] = useState('');
