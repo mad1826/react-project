@@ -79,6 +79,17 @@
 	margin: 20px auto;
 }
 
+#edit-coupon {
+	position: absolute;
+	right: 11%;
+	top: 5%;
+	background-color: var(--color-primary);
+	width: 27px;
+	height: 27px;
+	color: var(--color-item-accent);
+	border-radius: 5px;
+}
+
 #delete-coupon {
 	position: absolute;
 	right: 5%;

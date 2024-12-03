@@ -1,0 +1,41 @@
+#edit-modal-content {
+	border-radius: 10px;
+}
+
+#edit-modal-content h3 {
+	margin: auto;
+	line-height: 100px;
+}
+
+#edit-modal-content .columns-all {
+	justify-content: space-evenly;
+}
+
+#edit-modal-content button {
+	width: 20%;
+	font-size: 150%;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+#edit-btn {
+	background-color: var(--color-primary);
+}
+
+#edit-modal-content label {
+	width: 35%;
+	display: block;
+	text-align: right;
+	margin-right: 2%;
+	margin-bottom: 18px;
+}
+
+#edit-modal-content input {
+	text-align: left;
+	width: 35%;
+	height: 25px;
+}
+
+#edit-result {
+	padding-bottom: 20px;
+}
