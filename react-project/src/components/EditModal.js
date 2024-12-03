@@ -48,7 +48,7 @@ const EditModal = options => {
 
 	return <div id='edit-modal' className='w3-modal'>
 		<div id='edit-modal-content' className='w3-modal-content'>
-			<h3>Are you sure you want to edit {coupon.name}?</h3>
+			<h3>Now Editing {coupon.name}</h3>
 			<form onSubmit={editCoupon}>
 				<div className='columns-all'>
 					<label for='image-upload'>Item Image</label>
