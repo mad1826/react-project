@@ -13,7 +13,7 @@ const HygieneCoupon = options => {
 			<br />
 			<p>Exp. {coupon.expiresAt}</p>
 			<br />
-			{coupon.qualifyingItems && <p>Qualifying Items: {coupon.qualifyingItems.join(', ')}</p>}
+			{coupon.qualifyingItems?.length && <p>Qualifying Items: {coupon.qualifyingItems.join(', ')}</p>}
 		</div>
 	</Link>;
 };

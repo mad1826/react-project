@@ -13,7 +13,7 @@ const CartCoupon = options => {
 			</h3>
 			<img className='share' src='images/share.png' alt='share' />
 			<img className='remove' src='images/trash.png' alt='delete' />
-			{coupon.details ? <p className='notes'>{coupon.details}</p> : coupon.qualifyingItems ? <p className='notes'>Qualifying Items: {coupon.qualifyingItems.join(', ')}</p> : null}
+			{coupon.details ? <p className='notes'>{coupon.details}</p> : coupon.qualifyingItems?.length ? <p className='notes'>Qualifying Items: {coupon.qualifyingItems.join(', ')}</p> : null}
 			<p className='expires-at'>Exp. {coupon.expiresAt}</p>
 		</div>
 	</div>;
