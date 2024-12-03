@@ -29,7 +29,7 @@ const EditModal = options => {
 
 		const formData = new FormData(event.target);
 
-		const response = await fetch(`http://localhost:3001/api/coupons/${coupon._id}?type=${coupon.type}`, {
+		const response = await fetch(`https://couponder-api.onrender.com/api/coupons/${coupon._id}?type=${coupon.type}`, {
 			method: 'PUT',
 			body: formData
 		});
