@@ -38,7 +38,7 @@ const EditModal = options => {
 			const res = await response.json();
 			options.editCoupon(res);
 			options.setCoupon(res);
-			setResult('Coupon successfully edited!');
+			options.closeModal();
 		}
 		else {
 			setResult('An error has occurred!');
