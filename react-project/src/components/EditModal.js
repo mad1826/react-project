@@ -1,4 +1,3 @@
-/* eslint-disable @stylistic/jsx-indent-props */
 import { useState } from 'react';
 import '../css/EditModal.css';
 import { getCouponImg } from '../functions';
@@ -51,6 +50,8 @@ const EditModal = options => {
 		}
 	};
 
+	const imgSrc = image !== null ? URL.createObjectURL(image) : getCouponImg(coupon, true);
+
 	return <div id='edit-modal' className='w3-modal'>
 		<div id='edit-modal-content' className='w3-modal-content'>
 			<h3>Now Editing {coupon.name}</h3>
@@ -59,15 +60,7 @@ const EditModal = options => {
 					<label for='image-upload'>Item Image</label>
 					<div id='img-container'>
 						<input id='image-upload' type='file' name='image' onChange={handleImageChange} />
-						<img
-							id='future-img'
-							alt={newCoupon.name}
-							src={
-								image !== null
-									? URL.createObjectURL(image)
-									: getCouponImg(coupon, true)
-							}
-						/>
+						<img id='future-img' alt={newCoupon.name} src={imgSrc} />
 					</div>
 				</div>
 				<div className='columns-all'>
