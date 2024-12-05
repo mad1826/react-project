@@ -39,3 +39,19 @@
 #edit-result {
 	padding-bottom: 20px;
 }
+
+#img-container {
+	width: 35%;
+}
+
+#img-container #image-upload {
+	display: block;
+	width: 100%;
+}
+
+#future-img {
+	max-width: 100px;
+	max-height: 100px;
+	float: left;
+	margin: 10px 0;
+}

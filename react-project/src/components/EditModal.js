@@ -1,5 +1,7 @@
+/* eslint-disable @stylistic/jsx-indent-props */
 import { useState } from 'react';
 import '../css/EditModal.css';
+import { getCouponImg } from '../functions';
 
 const EditModal = options => {
 	const coupon = options.coupon;
@@ -11,6 +13,8 @@ const EditModal = options => {
 	const [newCoupon, setNewCoupon] = useState({ ...coupon, storeName: coupon.store.name, storeLocation: coupon.store.location, oldPrice: coupon.prices[0], newPrice: coupon.prices[1], oldRent: coupon.prices[2], newRent: coupon.prices[3], qualifyingItems: coupon.qualifyingItems?.join(', '), expiresAt: initExpiresAtStr });
 	const [result, setResult] = useState('');
 
+	const [image, setImage] = useState(null);
+
 	const handleChange = event => {
 		const name = event.target.name;
 		const value = event.target.value;
@@ -21,6 +25,7 @@ const EditModal = options => {
 		const name = event.target.name;
 		const value = event.target.files[0];
 		setNewCoupon(values => ({ ...values, [name]: value }));
+		setImage(value);
 	};
 
 	const editCoupon = async event => {
@@ -52,7 +57,18 @@ const EditModal = options => {
 			<form onSubmit={editCoupon}>
 				<div className='columns-all'>
 					<label for='image-upload'>Item Image</label>
-					<input id='image-upload' type='file' name='image' onChange={handleImageChange} />
+					<div id='img-container'>
+						<input id='image-upload' type='file' name='image' onChange={handleImageChange} />
+						<img
+							id='future-img'
+							alt={newCoupon.name}
+							src={
+								image !== null
+									? URL.createObjectURL(image)
+									: getCouponImg(coupon, true)
+							}
+						/>
+					</div>
 				</div>
 				<div className='columns-all'>
 					<label for='name'>Item Name</label>

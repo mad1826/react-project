@@ -1,5 +1,7 @@
-export const getCouponImg = coupon => {
-	return <img src={`https://couponder-api.onrender.com/images/${coupon.type}/${coupon.image}`} className='image' alt={coupon.name} />;
+export const getCouponImg = (coupon, onlySrc = false) => {
+	const src = `https://couponder-api.onrender.com/images/${coupon.type}/${coupon.image}`;
+	if (onlySrc) return src;
+	return <img src={src} className='image' alt={coupon.name} />;
 };
 
 export const getPrice = (coupon, offset = 0, showPercent = false) => {
